@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740b6461394aae6ff6c6bdb0f10a8530, type: 3}
+  m_Name: spell_interrupt
+  m_EditorClassIdentifier:
+  _serializedGraph: '{"version":2.6,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-3626.42,"y":-5001.822},"nodes":[{"_nodeColor":{"r":0.7490196,"g":0.4980392,"b":1.0,"a":1.0},"_position":{"x":4275.0,"y":5400.0},"_comment":"\u666e\u653b\u8ba1\u65f6","$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"2"},{"_condition":{"eventName":{"_name":"skill_interrupt","_targetVariableID":"70572d87-d497-42f2-9503-0f1fe8db792a"},"$type":"NodeCanvas.Tasks.Conditions.CheckEvent`1[[System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"_position":{"x":4020.0,"y":5595.0},"_comment":"\u68c0\u6d4b\u6280\u80fd\u6253\u65ad","$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"3"},{"_action":{"blackBoardAtrr1":{"_name":"DoActiveSpell","_targetVariableID":"bcc41487-110c-4cde-b2dc-0a34899a33a5"},"$type":"NodeCanvas.Tasks.Actions.BlackboardVariableNode"},"_position":{"x":4215.0,"y":5595.0},"_comment":"\u6807\u8bb0\u4e3a\u4e0d\u53ef\u91ca\u653e\u666e\u653b","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"6"},{"_action":{"blackBoardAtrr1":{"_name":"isCasing","_targetVariableID":"f9a9243a-6693-4bb5-8e17-94372afaadab"},"$type":"NodeCanvas.Tasks.Actions.BlackboardVariableNode"},"_position":{"x":4395.0,"y":5595.0},"_comment":"\u6807\u8bb0\u4e3a\u975e\u91ca\u653e\u72b6\u6001","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"9"},{"_action":{"$type":"NodeCanvas.Tasks.Actions.ResetNode"},"_position":{"x":4575.0,"y":5595.0},"_comment":"\u91cd\u7f6e\u884c\u4e3a\u6811","$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"12"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"6"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"9"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"12"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"primeNode":{"$ref":"2"},"localBlackboard":{"_name":"Local Blackboard","_variables":{"skill_interrupt":{"_value":"skill_interrupt","_name":"skill_interrupt","_id":"70572d87-d497-42f2-9503-0f1fe8db792a","$type":"NodeCanvas.Framework.Variable`1[[System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"DoNormalAtk":{"_name":"DoNormalAtk","_id":"7a7dad03-598e-4a32-82d2-52388081972b","$type":"NodeCanvas.Framework.Variable`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"isCasing":{"_name":"isCasing","_id":"f9a9243a-6693-4bb5-8e17-94372afaadab","$type":"NodeCanvas.Framework.Variable`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"DoActiveSpell":{"_name":"DoActiveSpell","_id":"bcc41487-110c-4cde-b2dc-0a34899a33a5","$type":"NodeCanvas.Framework.Variable`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"protecting":{"_name":"protecting","_id":"a2c141eb-ec71-442e-93c2-1e38dd5cfad9","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"waitReset":{"_name":"waitReset","_id":"cdbfaa87-1175-4744-9285-a3c87f39072e","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+  isInPool: 0
+  repeat: 1
+  updateInterval: 0
+  enableLazyReset: 0

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 740b6461394aae6ff6c6bdb0f10a8530, type: 3}
+  m_Name: console
+  m_EditorClassIdentifier:
+  _serializedGraph: '{"version":2.6,"type":"NodeCanvas.BehaviourTrees.BehaviourTree","translation":{"x":-5093.0,"y":-5006.0},"nodes":[{"_nodeColor":{"r":1.0,"g":0.3921569,"b":0.7960784,"a":1.0},"_position":{"x":5940.0,"y":5190.0},"$type":"NodeCanvas.BehaviourTrees.Parallel","$id":"2"},{"_nodeColor":{"r":0.7490196,"g":0.4980392,"b":1.0,"a":1.0},"_position":{"x":5775.0,"y":5280.0},"$type":"NodeCanvas.BehaviourTrees.Sequencer","$id":"3"},{"_condition":{"eventName":{"_name":"evt","_targetVariableID":"c86da3d6-75d2-48bc-87f3-9c43982b381b"},"$type":"NodeCanvas.Tasks.Conditions.CheckEvent`1[[System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"_position":{"x":5580.0,"y":5400.0},"$type":"NodeCanvas.BehaviourTrees.ConditionNode","$id":"4"},{"_action":{"count":{"_name":"count","_targetVariableID":"8b72115c-642a-4a54-911b-1bf8ec11dcce"},"$type":"NodeCanvas.Tasks.Actions.ConsoleNode"},"_position":{"x":5835.0,"y":5415.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"7"},{"_action":{"evt":{"_name":"evt","_targetVariableID":"c86da3d6-75d2-48bc-87f3-9c43982b381b"},"$type":"NodeCanvas.Tasks.Actions.Client"},"_position":{"x":6090.0,"y":5295.0},"$type":"NodeCanvas.BehaviourTrees.ActionNode","$id":"10"}],"connections":[{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"10"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"4"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"},{"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"7"},"$type":"NodeCanvas.BehaviourTrees.BTConnection"}],"primeNode":{"$ref":"2"},"localBlackboard":{"_name":"Local Blackboard","_variables":{"count":{"_value":200.0,"_name":"count","_id":"8b72115c-642a-4a54-911b-1bf8ec11dcce","$type":"NodeCanvas.Framework.Variable`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"target":{"_value":100.0,"_name":"target","_id":"d15b85e0-97b3-4e1f-9f07-c1d53f8d8fd8","$type":"NodeCanvas.Framework.Variable`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"evt":{"_value":"event","_name":"evt","_id":"c86da3d6-75d2-48bc-87f3-9c43982b381b","$type":"NodeCanvas.Framework.Variable`1[[System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"myFloat":{"_name":"myFloat","$type":"NodeCanvas.Framework.Variable`1[[System.Single, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}},"derivedData":{"repeat":true,"$type":"NodeCanvas.BehaviourTrees.BehaviourTree+DerivedSerializationData"}}'
+  _objectReferences: []
+  _deserializationFailed: 0
+  isInPool: 0
+  repeat: 1
+  updateInterval: 0
+  enableLazyReset: 0

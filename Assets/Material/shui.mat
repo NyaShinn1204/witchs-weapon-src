@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: shui
+  m_Shader: {fileID: 4800000, guid: 987cc657a474aba4bb9c9e7e27c3c3f8, type: 3}
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _EMISSION
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+      _AlphaTex:
+        m_Texture: {fileID: 2800000, guid: 5a00550affe9a404ab96fb12346e7564, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+      _WaterTex:
+        m_Texture: {fileID: 2800000, guid: 013943f3014d445448e1d84c9935655c, type: 3}
+        m_Scale: {x: 12, y: 12}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+      _Alpha: 0.71
+      _BumpScale: 1
+      _Cutoff: 0.5
+      _DetailNormalMapScale: 1
+      _DstBlend: 10
+      _GlossMapScale: 1
+      _Glossiness: 0.5
+      _GlossyReflections: 1
+      _Metallic: 0
+      _Mode: 3
+      _OcclusionStrength: 1
+      _Parallax: 0.02
+      _SmoothnessTextureChannel: 0
+      _SpecularHighlights: 1
+      _SpecularRatio: 200
+      _SrcBlend: 1
+      _Tiling: 0.182
+      _UVSec: 0
+      _WaveSpeed: 1.02
+      _ZWrite: 0
+      _inSideLight: 0.5
+      _outSideLight: 2.2
+      _shadowLight: 0.27
+      _specularLight: 1
+    m_Colors:
+      _Color: {r: 0.24705884, g: 0.6117647, b: 0.6, a: 0.39999998}
+      _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+      _LightColorSelf: {r: 1, g: 1, b: 1, a: 1}
+      _LightDir: {r: -0.18, g: 0.4, b: 0, a: 0}
+      _inSideColor: {r: 0.243756, g: 0.366, b: 0.35939884, a: 0}
+      _outSideColor: {r: 0.3406142, g: 0.40139502, b: 0.7352941, a: 0}

@@ -1,0 +1,138 @@
+using System;
+using System.Collections.Generic;
+
+namespace Facebook.Unity.Mobile.IOS
+{
+	internal class IOSFacebook : MobileFacebook
+	{
+		private class NativeDict
+		{
+			public int NumEntries { get; set; }
+
+			public string[] Keys { get; set; }
+
+			public string[] Values { get; set; }
+		}
+
+		private bool limitEventUsage;
+
+		private IIOSWrapper iosWrapper;
+
+		public override bool LimitEventUsage
+		{
+			get
+			{
+				return false;
+			}
+			set
+			{
+			}
+		}
+
+		public override string SDKName
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public override string SDKVersion
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public IOSFacebook()
+			: base(null)
+		{
+		}
+
+		public IOSFacebook(IIOSWrapper iosWrapper, CallbackManager callbackManager)
+			: base(null)
+		{
+		}
+
+		public void Init(string appId, bool frictionlessRequests, string iosURLSuffix, HideUnityDelegate hideUnityDelegate, InitDelegate onInitComplete)
+		{
+		}
+
+		public override void LogInWithReadPermissions(IEnumerable<string> permissions, FacebookDelegate<ILoginResult> callback)
+		{
+		}
+
+		public override void LogInWithPublishPermissions(IEnumerable<string> permissions, FacebookDelegate<ILoginResult> callback)
+		{
+		}
+
+		public override void LogOut()
+		{
+		}
+
+		public override void AppRequest(string message, OGActionType? actionType, string objectId, IEnumerable<string> to, IEnumerable<object> filters, IEnumerable<string> excludeIds, int? maxRecipients, string data, string title, FacebookDelegate<IAppRequestResult> callback)
+		{
+		}
+
+		public override void AppInvite(Uri appLinkUrl, Uri previewImageUrl, FacebookDelegate<IAppInviteResult> callback)
+		{
+		}
+
+		public override void ShareLink(Uri contentURL, string contentTitle, string contentDescription, Uri photoURL, FacebookDelegate<IShareResult> callback)
+		{
+		}
+
+		public override void FeedShare(string toId, Uri link, string linkName, string linkCaption, string linkDescription, Uri picture, string mediaSource, FacebookDelegate<IShareResult> callback)
+		{
+		}
+
+		public override void AppEventsLogEvent(string logEvent, float? valueToSum, Dictionary<string, object> parameters)
+		{
+		}
+
+		public override void AppEventsLogPurchase(float logPurchase, string currency, Dictionary<string, object> parameters)
+		{
+		}
+
+		public override bool IsImplicitPurchaseLoggingEnabled()
+		{
+			return false;
+		}
+
+		public override void ActivateApp(string appId)
+		{
+		}
+
+		public override void FetchDeferredAppLink(FacebookDelegate<IAppLinkResult> callback)
+		{
+		}
+
+		public override void GetAppLink(FacebookDelegate<IAppLinkResult> callback)
+		{
+		}
+
+		public override void RefreshCurrentAccessToken(FacebookDelegate<IAccessTokenRefreshResult> callback)
+		{
+		}
+
+		protected override void SetShareDialogMode(ShareDialogMode mode)
+		{
+		}
+
+		private static IIOSWrapper GetIOSWrapper()
+		{
+			return null;
+		}
+
+		private static NativeDict MarshallDict(Dictionary<string, object> dict)
+		{
+			return null;
+		}
+
+		private int AddCallback<T>(FacebookDelegate<T> callback) where T : IResult
+		{
+			return 0;
+		}
+	}
+}

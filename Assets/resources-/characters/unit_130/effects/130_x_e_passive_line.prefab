@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1175234794608388
+GameObject:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_Component:
+  - component: {fileID: 4181707516104261}
+  - component: {fileID: 114343824791732921}
+  m_Layer: 0
+  m_Name: 130_x_e_passive_line
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4181707516104261
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175234794608388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.1340339, y: 0.6595646, z: 5.2173414}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: -0, z: -0}
+--- !u!114 &114343824791732921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1175234794608388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f971952c7e7781178734005bebebcde8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _typeLineDraw: 0
+  _typeLineAnimStart: 1
+  _typeLineAnimEnd: 2
+  _typeLineType: 1
+  _material: {fileID: 2100000, guid: 109a33e8cc82004489263fadd5ea98c4, type: 2}
+  _effectStart: 0
+  _effectEnd: 9810000545
+  _lifeTime: 0.5
+  _offsetLocation: {x: 0.23, y: 0, z: 0}
+  _width:
+  - -0.04
+  - -0.4
+  - 0
+  _tilingMul: 0.26
+--- !u!1001 &100100000
+Prefab:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1175234794608388}
+  m_IsPrefabParent: 1

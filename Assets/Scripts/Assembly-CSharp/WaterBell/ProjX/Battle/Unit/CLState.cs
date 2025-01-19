@@ -1,0 +1,40 @@
+namespace WaterBell.ProjX.Battle.Unit
+{
+	public enum CLState
+	{
+		Spawn = 1000,
+		Appear_Servant = 1001,
+		Leave_Servant = 1002,
+		FightOver_Monster = 1003,
+		QuestFailed_Player = 1004,
+		QuestWin_Player = 1007,
+		RelifeWait = 1005,
+		Relife = 1006,
+		NotInBattle = 1099,
+		Forced2Air = 2000,
+		Forced2Ground = 2001,
+		Forced2Stun = 2002,
+		DeadOnGround = 2100,
+		DeadInAir = 2101,
+		BeCatch = 2200,
+		PostPull = 2300,
+		Tempt = 2400,
+		CastingSkill = 3000,
+		CastingCharge = 3001,
+		CastingWeaponAtk = 3002,
+		CastingSpecialSpell = 3003,
+		CastingDashATk = 3004,
+		CastingRushForward = 3005,
+		CastingDashATkAfter = 3006,
+		AdjustingPosDir = 3007,
+		DrawWeapon_Hero = 3100,
+		Wait4SpawnFinish = 3101,
+		RunToDir_Hero = 3103,
+		Run2Target = 4000,
+		RandomMove = 4001,
+		StandByAndGuard = 5000,
+		Attacked = 5001,
+		StandStill = 5002,
+		StandByAndEmptyAtk = 5004
+	}
+}
