@@ -1,0 +1,286 @@
+syntax = "proto3";
+package all;
+message ActivityInstance {
+    int64 Recharge = 1;
+    LootResult RechargeReward = 2;
+    int32 RechargeRewardIntimeTag = 3;
+    int64 RechargeIntimeTime = 4;
+    LootResult RechargeRewardIntime = 5;
+    int32 ParticipationRewardTag = 6;
+    LootResult ParticipationReward = 7;
+    int32 DaysSignRewardTag = 8;
+    int64 DaysSignTime = 9;
+    int32 RechargeAccumulationTag = 10;
+    LootResult RechargeAccumulationReward = 11;
+    int32 RechargeRewardIntimeCanReceiveTag = 12;
+}
+
+message ActivityList {
+    map<int64, ActivityInstanceProto> ActivityInstanceProtoMap = 1;
+}
+
+message ActivityInstanceProto {
+    int32 ActivityType = 1;
+    int64 BaseID = 2;
+    int64 StartTime = 3;
+    int64 EndTime = 4;
+    int64 CloseTime = 5;
+    bool Finished = 6;
+    DaysSign DaysSign = 100;
+    RechargeReward RechargeReward = 101;
+    RoleLevelReward RoleLevelReward = 102;
+    InstanceReward InstanceReward = 103;
+}
+
+message DaysSign {
+    int32 DaysSignRewardTag = 1;
+    int64 DaysSignTime = 2;
+}
+
+message RechargeReward {
+    int64 Recharge = 1;
+    int32 RechargeCanReceiveTag = 2;
+    int32 RechargeRewardTag = 3;
+}
+
+message RoleLevelReward {
+    int32 RoleLevelCanReceiveTag = 1;
+    int32 RoleLevelRewardTag = 2;
+}
+
+message InstanceReward {
+    int32 InstanceCanReceiveTag = 1;
+    int32 InstanceRewardTag = 2;
+}
+
+message LootObject {
+    int32 Type = 1;
+    int64 Value = 2;
+    int64 Num = 3;
+    RuneInfo RuneInfo =4;
+}
+
+message LootResult {
+    repeated LootObject lootObjects = 1;
+    ExtraInfo extraInfo = 2;
+}
+
+message BackpackInfo {
+     repeated int32 backpackContent = 1;
+}
+
+message ItemPackInfo {
+    repeated int64 itemID = 1;
+    repeated int32 itemNum = 2;
+}
+
+message ServantEquipPackInfo {
+    repeated int64 servantEquipID = 1;
+    repeated int32 servantEquipNum = 2;
+}
+
+message BackpackAddup {
+     repeated int32 Addup = 1;
+}
+
+message RunePackInfo {
+    repeated RuneInfo RuneInfos = 1;
+}
+
+message RuneInfo {
+    int32 RuneID = 1;
+    int32 Type = 2;
+    int32 Color = 3;
+    int32 Position = 4;
+    int32 Level = 5;
+    int64 Exp = 6;
+    repeated int32 AttrType = 7;
+    repeated int32 AttrValue = 8;
+    double FloatModulus = 9;
+    bool Locked = 10;
+}
+
+message ExtraInfo {
+    repeated LevelEvent LevelEvent = 1;			//主线开启章节事件
+    Result AchieveResult = 2;	//成就任务返回结果
+    bool CscOpen = 3;  //核心动力开放
+}
+
+message LevelEvent{
+	string Name = 1;
+	repeated string Value = 2;
+}
+
+message AchieveData {
+    int32 AchievementType = 1; //成就类型
+    int32 QuestType = 2; //任务类型
+    int64 NextAchievement = 3; //系列后续成就
+    int32 IsRepeatable = 4; //是否可重复
+    int32 RepeatableNum = 5; //重复次数
+    int64 TimeOfDuration = 6; //任务持续时间
+    int32 AchievementArgu1 = 7; //成就参数1
+    int32 AchievementArgu2 = 8; //成就参数2
+    int64 AchievementArgu3 = 9; //成就参数3
+    int32 OpenType = 10; //任务开启类型
+    int32 OpenArgu1 = 11; //任务开启类型参数1
+    int32 OpenArgu2 = 12; //任务开启类型参数2
+    int64 OpenArgu3 = 13; //任务开启类型参数3
+    string OpenArgu4 = 14; //任务开启类型参数4
+    string OpenArgu5 = 15; //任务开启类型参数5
+    int64 AchievementReward = 16; //成就奖励
+}
+
+message Metadata {
+    MetaCM RoleLevel = 1; //角色等级
+    MetaCM ServantNum = 2; //英灵数量
+    MetaCM ServantLevel = 3; //英灵等级
+    MetaCM ServantRank = 4; //英灵位阶
+    MetaCM ServantStar = 5; //英灵星级
+    MetaCM ServantFavour = 6; //英灵好感度
+    MetaCM ServantLevelUp = 27; //英灵升级
+    MetaCM ServantStarPointUp = 28; //英灵星角点升级
+    MetaCM ServantSpellUp = 29; //英灵技能升级
+    MetaCM ServantWeaponExp = 30; //英灵武器经验提升
+    MetaCM ServantWearEquip = 31; //英灵穿装备
+
+    MetaFC FinishChap = 7; //完成副本集
+    MetaFL FinishLevel = 8; //完成副本
+    MetaFT FinishLevelType = 9; //完成副本类型
+    MetaCM CSC = 10; //核心动力玩法
+    MetaCM CoinServant = 11; //金币抽英灵
+    MetaCM CoinPrize = 12; //金币抽奖
+    MetaCM CoinTen = 13; //金币十连
+    MetaCM DiamondServant = 14; //钻石抽英灵
+    MetaCM DiamondPrize = 15; //钻石抽奖
+    MetaCM DiamondTen = 16; //钻石十连
+    MetaSB StoreBuy = 17; //商店购买
+    MetaCM DiamondCoin = 18; //钻石买金币
+    MetaCM DiamondVit = 19; //钻石买体力
+    MetaGI Items = 20; //获得物品
+    MetaGE Equipment = 21; //获得装备
+    MetaKE KillEnemy = 22; //击杀敌人
+    MetaCM TotalDamage = 23; //累计攻击伤害
+    MetaCM TotalHurt = 24; //累计受击伤害
+    MetaCM TotalCure = 25; //累计治疗
+    MetaCM NPC = 26; //拯救NPC
+}
+
+message CurTypeNodes {
+    message CurNodes {
+        message Goal {
+            int64 ID = 1;
+            int64 EndTime = 2;
+        }
+        string Type = 1;
+        repeated Goal Nodes = 2;
+    }
+    repeated CurNodes Data = 1;
+}
+
+message Job {
+    int64 ID = 1; //成就或任务ID
+    int32 Status = 2; //成就或任务状态，-1: 未完成，0：完成未领取，1：完成并领取
+    int32 Valid = 3; //成就或任务是否有效(过期) 0：无效，1：有效
+    string TypeID = 4; //成就或任务所属的类型
+}
+
+message Jobs {
+    repeated Job Data = 1;
+}
+
+message MetaInfo {
+    int32 TorD = 1; //T 为1 ，D 为2
+    string TypeID = 2; //成就或任务的类型
+    int64 JobID = 3; //成就或任务ID ,以这个成就参数来判断是那条链表
+    int32 Meta = 4; //元数据, 通常为某种类型的计数
+    int64 EndTime = 5; //截止时间，如果为0表示没有截止时间
+}
+
+message Result {
+    repeated Job Jobs = 1;
+    repeated MetaInfo Metas = 2;
+}
+
+//通用类型 common
+message MetaCM {
+    int64 LastTime = 1;
+    int32 Count = 2;
+    int32 RepeatCount = 3;
+}
+
+//完成副本 finish level
+message MetaFL {
+    message Obj {
+        int64 LevelID = 1;
+        int32 Count = 2;
+    }
+    repeated Obj Data = 1;
+    int64 LastTime = 2;
+    int32 RepeatCount = 3;
+}
+
+//完成副本集 finish chapter
+message MetaFC {
+    message Obj {
+        int64 ChapID = 1;
+        int32 Count = 2;
+    }
+    repeated Obj Data = 1;
+    int64 LastTime = 2;
+    int32 RepeatCount = 3;
+}
+
+//完成副本类型 finish level type
+message MetaFT {
+    message Obj {
+        int32 TypeID = 1;
+        int32 Count = 2;
+    }
+    repeated Obj Data = 1;
+    int64 LastTime = 2;
+    int32 RepeatCount = 3;
+}
+
+//商店购买 store buy
+message MetaSB {
+    message Obj {
+        int64 SetID = 1;
+        int32 Count = 2;
+    }
+    repeated Obj Data = 1;
+    int64 LastTime = 2;
+    int32 RepeatCount = 3;
+}
+
+//获得物品 gain items
+message MetaGI {
+    message Obj {
+        int64 ItemID = 1;
+        int32 Count = 2;
+    }
+    repeated Obj Data = 1;
+    int64 LastTime = 2;
+    int32 RepeatCount = 3;
+}
+
+//获得装备 gain equipment
+message MetaGE {
+    message Obj {
+        int64 EquipID = 1;
+        int32 Count = 2;
+    }
+    repeated Obj Data = 1;
+    int64 LastTime = 2;
+    int32 RepeatCount = 3;
+}
+
+//击杀敌人 kill enemy
+message MetaKE {
+    message Obj {
+        int64 MonsterID = 1;
+        int32 Count = 2;
+    }
+    repeated Obj Data = 1;
+    int64 LastTime = 2;
+    int32 RepeatCount = 3;
+}

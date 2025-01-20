@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+package main;
+
+message Lua {
+    message Nested {
+        string Message = 1;
+    }
+    string Name = 1;
+    int32 Age = 2;
+    repeated string Arr = 3;
+    int64 Num64 = 4;
+    float Float = 5;
+    double Double = 6;
+    repeated Nested N = 7;
+}
